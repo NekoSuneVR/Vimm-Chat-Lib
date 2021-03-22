@@ -47,7 +47,7 @@ function Connect(){
 			
 			if(event){ // removed due to the bot not connecting - if(event == 1006)
 			
-				chat.connect(Channel) // If Abnormal disconnect (1006), Glimesh Bot reconnects.
+				chat.connect(Channel) // If Abnormal disconnect (1006), Vimm Bot reconnects.
 				
 			}
 			
@@ -57,6 +57,6 @@ function Connect(){
 	
 }
 
-Connect() // Initiates connection to Glimesh's WS Server.
+Connect() // Initiates connection to Vimm's WS Server.
 
 ```

@@ -29,7 +29,7 @@ function Connect(){
 			if(msg.message == "!close"){
 				chat.close() // This !close command will turn the bot off
 			}
-    	})
+    	        })
 		chat.on("close", event => {
 			console.log(event)
 			if(event){ // removed due to the bot not connecting - if(event == 1006)

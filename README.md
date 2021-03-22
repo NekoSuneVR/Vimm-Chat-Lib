@@ -9,8 +9,11 @@ Fork of https://github.com/GlobalGamer2015/Glimesh-Chat-Lib but Built in VimmTV 
 const Channel = ""; // Your channel's username
 
 const Vimm = require("vimm-chat-lib")
+
 const chat = new Vimm.VimmChat({
+
 	debug: false // Outputs heartbeat logs if true.
+	
 })
 
 function Connect(){

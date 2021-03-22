@@ -1,0 +1,28 @@
+{
+	"name": "vimm-chat-lib",
+	"version": "1.0.0",
+	"description": "Connect to VimmTV WS Servers, used with VimmTV Chat Bots.",
+	"main": "lib/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChisdealHDYT/Vimm-Chat-Lib"
+	},
+	"keywords": [
+		"vimmtv",
+		"chat",
+		"bot"
+	],
+	"author": "ChisdealHDYT",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"ws": "^7.4.4"
+	},
+	"devDependencies": {
+		"@types/ws": "^7.4.4"
+	},
+	"types": "lib/index.d.ts"
+}

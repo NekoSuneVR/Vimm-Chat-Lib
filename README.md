@@ -22,7 +22,7 @@ function Connect(){
   			//	prefix: '',
   			//	message: 'test',
   			//	chatter: 'username',
-                        //      mtype: 'message'
+                        //      mtype: 'message',
    			//	channel: 'channelname'
 			//}
 			

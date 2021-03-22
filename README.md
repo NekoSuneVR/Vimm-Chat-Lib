@@ -14,9 +14,13 @@ const chat = new Vimm.VimmChat({
 })
 
 function Connect(){
+
 	chat.connect(Channel).then(meta => {
+	
 		chat.on("message", msg => {
+		
 			console.log(msg)
+			
 			// msg displays the following when a message is said in chat.
 			//{
   			//	prefix: '',
@@ -27,17 +31,29 @@ function Connect(){
 			//}
 			
 			if(msg.message == "!close"){
+			
 				chat.close() // This !close command will turn the bot off
+				
 			}
+			
     	        })
+		
 		chat.on("close", event => {
+		
 			console.log(event)
+			
 			if(event){ // removed due to the bot not connecting - if(event == 1006)
+			
 				chat.connect(Channel) // If Abnormal disconnect (1006), Glimesh Bot reconnects.
+				
 			}
+			
 		})
+		
 	})
+	
 }
+
 Connect() // Initiates connection to Glimesh's WS Server.
 
 ```

@@ -36,7 +36,7 @@ function Connect(){
 			//}
 			
 			if (msg.message == "!hey") {
-                chat.sendMessage(, `HELLO THERE, NICE MEET YOU!`)
+                chat.sendMessage("YOURCHANNELNAME", `HELLO THERE, NICE MEET YOU!`)
             }
 
 			// BOT MESSAGE LAYOUT

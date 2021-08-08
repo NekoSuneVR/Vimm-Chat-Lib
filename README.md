@@ -31,16 +31,15 @@ function Connect(){
   			//	prefix: '',
   			//	message: 'test',
   			//	chatter: 'username',
-            //  mtype: 'message',
+			//  mtype: 'message',
    			//	channel: 'channelname'
 			//}
 			
 			if (msg.message == "!hey") {
-                chat.sendMessage("YOURCHANNELNAME", `HELLO THERE, NICE MEET YOU!`)
-            }
+				chat.sendMessage("YOURCHANNELNAME", `HELLO THERE, NICE MEET YOU!`)
+			}
 
 			// BOT MESSAGE LAYOUT
-
 			//{
   			//	mtype: 'message',
   			//	message: 'HELLO THERE, NICE MEET YOU!',

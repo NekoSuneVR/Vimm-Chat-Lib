@@ -11,7 +11,7 @@ const Channel = ""; // Your channel's username
 const Vimm = require("vimm-chat-lib")
 
 const chat = new Vimm.VimmChat({
-
+	token: "BOT TOKEN HERE",
 	debug: false // Outputs heartbeat logs if true.
 	
 })
@@ -21,25 +21,35 @@ function Connect(){
 	chat.connect(Channel).then(meta => {
 	
 		chat.on("message", msg => {
-		
-			console.log(msg)
+			
+			if (msg.prefix == "[bot]") return
+
+			//console.log(msg)
 			
 			// msg displays the following when a message is said in chat.
 			//{
   			//	prefix: '',
   			//	message: 'test',
   			//	chatter: 'username',
-                        //      mtype: 'message',
+            //  mtype: 'message',
    			//	channel: 'channelname'
 			//}
 			
-			if(msg.message == "!close"){
+			if (msg.message == "!hey") {
+                chat.sendMessage(, `HELLO THERE, NICE MEET YOU!`)
+            }
+
+			// BOT MESSAGE LAYOUT
+
+			//{
+  			//	mtype: 'message',
+  			//	message: 'HELLO THERE, NICE MEET YOU!',
+  			//	chatter: 'BOTNAME',
+  			//	channel: 'YOURCHANNEL',
+  			//	prefix: '[bot]'
+			//}
 			
-				chat.close() // This !close command will turn the bot off
-				
-			}
-			
-    	        })
+    	})
 		
 		chat.on("close", event => {
 		

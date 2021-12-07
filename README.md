@@ -6,7 +6,7 @@ Fork of https://github.com/GlobalGamer2015/Glimesh-Chat-Lib but Built in VimmTV 
 
 ```node
 
-const Channel = ""; // Your channel's username
+const Channel = ["channel1","channel2","ETC"]; // Your channel's username
 
 const Vimm = require("vimm-chat-lib")
 
@@ -22,17 +22,27 @@ function Connect(){
 	
 		chat.on("message", msg => {
 			
-			if (msg.prefix == "[bot]") return
-
-			//console.log(msg)
+			if (msg.roles[0].bot == true) return
 			
 			// msg displays the following when a message is said in chat.
 			//{
-  			//	prefix: '',
+			//      roles: [{
+                        //         admins: false,
+                        //         developer: false,
+                        //         broadcaster: false,
+                        //         moderators: false,
+                        //         bot: false,
+                        //         subscriber: false,
+                        //         premiumT1: false,
+                        //         premiumT2: false,
+                        //         premiumT3: false,
+                        //         supporter: false
+			//      }]
+  			//	mtype: 'message',
   			//	message: 'test',
   			//	chatter: 'username',
-			//  mtype: 'message',
-   			//	channel: 'channelname'
+			//      channel: 'channelname',
+			//      prefix: '[bot]'
 			//}
 			
 			if (msg.message == "!hey") {
@@ -40,20 +50,31 @@ function Connect(){
 			}
 
 			// BOT MESSAGE LAYOUT
+			
 			//{
+			//      roles: [{
+                        //         admins: false,
+                        //         developer: false,
+                        //         broadcaster: false,
+                        //         moderators: false,
+                        //         bot: true,
+                        //         subscriber: false,
+                        //         premiumT1: false,
+                        //         premiumT2: false,
+                        //         premiumT3: false,
+                        //         supporter: false
+			//      }]
   			//	mtype: 'message',
   			//	message: 'HELLO THERE, NICE MEET YOU!',
   			//	chatter: 'BOTNAME',
-  			//	channel: 'YOURCHANNEL',
-  			//	prefix: '[bot]'
+			//      channel: 'YOURCHANNEL',
+			//      prefix: '[bot]'
 			//}
 			
-    	})
+                })
 		
 		chat.on("close", event => {
-		
-			console.log(event)
-			
+
 			if(event){ // removed due to the bot not connecting - if(event == 1006)
 			
 				chat.connect(Channel) // If Abnormal disconnect (1006), Vimm Bot reconnects.

@@ -6,7 +6,7 @@
 
 const Channel = ["channel1","channel2","ETC"]; // Your channel's username
 
-const Vimm = require("vimm-chat-lib")
+const Vimm = require("vimm-chat-lib-new")
 
 const chat = new Vimm.VimmChat({
 	token: "BOT TOKEN HERE",

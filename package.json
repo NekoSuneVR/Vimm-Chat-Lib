@@ -1,6 +1,6 @@
 {
     "name": "vimm-chat-lib",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Connect to VimmTV WS Servers, used with VimmTV Chat Bots.",
     "main": "lib/index.js",
     "scripts": {
